@@ -1,0 +1,27 @@
+---
+// Obtener la fecha actual y formatearla
+const fecha = new Date();
+const opciones: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
+---
+
+<footer class="rounded-lg shadow m-4 backdrop-blur-lg w-full xl:w-[1120px] mx-auto mb-10">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                                
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-white/90 sm:mb-0 ">
+                <li>
+                    <a href="#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+                </li>
+               
+                    <a href="#contacto" class="hover:underline">Contacto</a>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span class="block text-sm text-yellow-200v sm:text-center dark:text-gray-400">{fechaFormateada}. All Rights Reserved.</span>
+    </div>
+</footer>
+

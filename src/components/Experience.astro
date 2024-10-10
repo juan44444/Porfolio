@@ -1,0 +1,62 @@
+---
+import type { getModeForUsageLocation } from 'typescript';
+import Experienceitem from '../components/Experienceitem.astro';
+ 
+
+const EXPERIENCE = [
+
+    {
+        title: 'Auditoria | Empresa Scienza',
+        date: '2016 - Actualidad', 
+        description: `- Funciones: Auditoria de documentación en farmacias, en la
+ provincia de San Juan
+ - Preparación de reportes de resultados por áreas
+ - Cumplimiento de los procedimientos y las políticas de la
+ empresa.
+  - Colaboración con otros departamentos para la resolución
+ efectiva de problemas.`
+    
+    },
+    {   
+        title: 'Administracion Contable | Empresa Nuevo Sur S.R.L.',
+        date: '2014 - 2015',                
+        description:`- Recaudación diaria.
+ - Administración de planillas de horarios de choferes.
+ - Pago de contribuciones sociales.
+ - Venta de abonos a docente.
+ - Atención al cliente.
+ - Manejo de sistemas informáticos y tecnológicos.
+ - Atención telefónica y gestión del correo electrónico de la
+ empresa.
+ - Resolución de problemas y atención a incidencias.
+ - Realización de tareas administrativas.
+ - Control y monitoreo de información.
+ - Arqueo de cajas y control de entradas y salidas.`
+    },
+
+    
+    {
+        title: 'Auditoria | Secretaria de Hacienda y Finanzas',
+        date: '2008',
+        description: 'Control y supervisión de recursos financiero | Pasantias'
+    }
+]
+---
+
+
+
+<ol class="relative border-s border-gray-200 ml-3.5">          
+    {
+        EXPERIENCE.map((experience) => (
+        <li class="mb-10 ms-4">
+
+            <Experienceitem {...experience}/>
+           
+
+
+        </li>
+            
+        ))
+    }   
+</ol>
+
